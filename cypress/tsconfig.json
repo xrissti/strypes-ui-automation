@@ -1,0 +1,27 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+      "baseUrl": "./",
+      "sourceMap": false,
+      "declaration": false,
+      "downlevelIteration": true,
+      "experimentalDecorators": true,
+      "moduleResolution": "node",
+      "importHelpers": true,
+      "resolveJsonModule": true,
+      "target": "es2015",
+      "module": "es2015",
+      "lib": [
+        "es2018",
+        "dom"
+      ],
+      "types": ["cypress", "node"]
+    },
+    "include": [
+      "node_modules/cypress", 
+      "**/*.ts",
+      "."
+    ]
+  }
+  
+  

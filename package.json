@@ -1,0 +1,26 @@
+{
+  "name": "strypes-ui-automation",
+  "version": "1.0.0",
+  "description": "Strypes UI tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hristina Petkova",
+  "license": "ISC",
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/integration",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cucumber-test-results",
+      "filePrefix": "",
+      "fileSuffix": ""
+    }
+  },
+  "devDependencies": {
+    "cypress": "^9.7.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "typescript": "^4.9.4"
+  }
+}
