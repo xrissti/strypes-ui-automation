@@ -6,10 +6,12 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 });
 
 Given('navigate to the {string} page', (pageName: string) => {
+  cy.intercept('GET', 'https://api.hubspot.com/livechat-public/v1/message/*').as('chatbot');
   cy.visit(PAGES[pageName].url);
+
 });
 
-Then('the {string} page should be displayed correctly', (pageName) => {
+Then('the {string} page should be displayed', (pageName) => {
   cy.url().should('contain', PAGES[pageName].resource);
 	waitForPageToLoad(pageName);
 });

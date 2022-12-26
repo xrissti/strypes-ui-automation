@@ -1,8 +1,8 @@
 # Strypes UI test project
 
 ## Installation
-* git clone 
-* npm install in VS terminal
+* clone the project https://github.com/xrissti/strypes-ui-automation
+* `npm install` in VS terminal
 
 ## Execution
 * `npx cypress open` opens the Cypress Test Runner (in VS terminal)

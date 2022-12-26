@@ -1,7 +1,7 @@
 const cypressConfig = Cypress.config() as any;
 
 export const PAGES: { [key: string]: any } = {
-	'Main': {
+	'Home': {
 		url: `${cypressConfig.baseUrl}`,
 		resource: '/',
 		elements: []
@@ -26,9 +26,24 @@ export const PAGES: { [key: string]: any } = {
 		resource: 'our-leadership',
 		elements: []
 	},
-	'Cusomers': {
-		url: `${cypressConfig.baseUrl}/customers/`,
-		resource: 'customers',
+	'Building Smart Solutions': {
+		url: `${cypressConfig.baseUrl}/services/`,
+		resource: 'services',
+		elements: []
+	},
+	'Nearsurance': {
+		url: `${cypressConfig.baseUrl}/nearsurance/`,
+		resource: 'nearsurance',
+		elements: []
+	},
+	'Start your career in IT': {
+		url: `https://blog.strypes.eu/blog/a-great-career-start-for-junior-developers-trained-by-code-academy-in-partnership-with-strypes`,
+		resource: 'blog',
+		elements: []
+	},
+	'Contact': {
+		url: `${cypressConfig.baseUrl}/contact/`,
+		resource: 'contact',
 		elements: []
 	}
 }
