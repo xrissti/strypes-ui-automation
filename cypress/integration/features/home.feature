@@ -36,11 +36,24 @@ Scenario: The user is returned to the top of the Home page
     Then the top right menu should be displayed
 
 @automated
+Scenario: Find a particular slide Nearsurance
+    Then find the right slide
+
+@automated
 Scenario Outline: Verify whether on clicking each Learn more button of the slideshow, the corresponding page is displayed.
-    When click 'Learn more' button on '<text>' slide heading
-    Then the '<text>' page should be displayed
+    When click 'Learn more' button on '<name>' slide heading
+    Then the '<name>' page should be displayed
 Examples:
-        |text                     | url        |
+        |name                     | url        |
         |Building Smart Solutions | Services   |
         |Nearsurance              | Nearsurance|
 #        |Start your career in IT  | Blog       |
+
+@automated
+Scenario Outline: Verify texts in each slide
+    Then the slide '<name>' contains description '<text>'
+Examples:
+        |name                     | text                                                     |
+        |Building Smart Solutions | We provide end-to-end software solutions                 |
+        |Nearsurance              | Our unique outsourcing model that brings business success|
+        |Start your career in IT  | Do you have some interest and knowledge in IT?           |
